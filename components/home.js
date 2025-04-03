@@ -10,7 +10,7 @@ export default function Homepage() {
       minHeight: "100vh", 
       backgroundColor: "#1a202c", 
       padding: "20px", 
-      backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
+      backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.1) 4px, transparent 3px)",
       backgroundSize: "10px 10px" 
     }}>
       <h1 style={{ fontSize: "2rem", fontWeight: "bold", color: "#f7fafc", marginBottom: "10px" }}>
