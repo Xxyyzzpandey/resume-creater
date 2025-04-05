@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Homepage() {
@@ -19,9 +20,9 @@ export default function Homepage() {
       <p style={{ color: "#a0aec0", fontSize: "1.125rem", textAlign: "center", maxWidth: "600px", marginBottom: "20px" }}>
         Create a stunning, professional resume with our easy-to-use resume builder. No design skills required!
       </p>
-      <button style={{ backgroundColor: "#3182ce", color: "white", padding: "12px 24px", fontSize: "1rem", borderRadius: "8px", border: "none", cursor: "pointer", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
+      <Link href="/editor" style={{ backgroundColor: "#3182ce", color: "white", padding: "12px 24px", fontSize: "1rem", borderRadius: "8px", border: "none", cursor: "pointer", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
         Get Started for Free
-      </button>
+      </Link>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "20px", marginTop: "40px", width: "100%", maxWidth: "900px" }}>
         <div style={{ padding: "20px", textAlign: "center", backgroundColor: "#2d3748", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", borderRadius: "8px" }}>
           <h2 style={{ fontSize: "1.25rem", fontWeight: "600", marginBottom: "10px", color: "#edf2f7" }}>Easy to Use</h2>
