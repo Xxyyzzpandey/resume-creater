@@ -23,6 +23,8 @@ const SingleEditor = ({ tab }) => {
             }),
         );
     };
+    if (!resumeData) return <p className="text-gray-400">No data available for this section.</p>;
+
 
     return (
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 md:gap-x-8">
