@@ -37,7 +37,7 @@ const Editor = ({ tab }) => {
   }, [dispatch]);
 
   return (
-    <form onSubmit={save} className="card my-8">
+    <form onSubmit={save} className="card my-8 bg-gray-900 m-1">
       {multiple ? <MultiEditor tab={tab} /> : <SingleEditor tab={tab} />}
 
       <button
