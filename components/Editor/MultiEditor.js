@@ -50,8 +50,12 @@ const MultiEditor = ({ tab }) => {
 
     return (
         <div>
-            <button type="button" className="btn mb-6 ml-auto bg-gray-600/75 text-sm 2xl:text-base" onClick={addNew}>
-                <LuPlus />
+            <button
+                type="button"
+                className="btn mb-6 ml-auto flex items-center gap-2 rounded-md border border-blue-500 bg-blue-500 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all duration-150 hover:brightness-110 active:scale-95 2xl:text-base"
+                onClick={addNew}
+            >
+                <LuPlus className="text-lg" />
                 <span>Add New</span>
             </button>
 
@@ -87,7 +91,8 @@ const MultiEditor = ({ tab }) => {
                                 className="hover:text-primary-400 disabled:cursor-not-allowed disabled:opacity-50"
                                 onClick={_ => {
                                     _.stopPropagation();
-                                    dispatch(moveIndex({ tab, index: i }));
+                                    //dispatch(moveIndex({ tab, index: i }));
+                                    dispatch(moveIndex({ tab, index: i, dir: 'down' }));
                                 }}
                             >
                                 <FaArrowDown />
