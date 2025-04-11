@@ -9,15 +9,35 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.2.4",
+    "@react-pdf/renderer": "^4.3.0",
+    "@reduxjs/toolkit": "^2.6.1",
+    "axios": "^1.8.4",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "change-case": "^5.4.4",
+    "mongoose": "^8.13.2",
+    "next": "15.2.4",
+    "next-auth": "^4.24.11",
+    "pdfjs-dist": "^3.11.174",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "react-contenteditable": "^3.3.7",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-parallax-tilt": "^1.7.288",
+    "react-pdf": "^9.2.1",
+    "react-redux": "^9.2.0",
+    "react-toastify": "^11.0.5",
+    "sass": "^1.86.3",
+    "tailwind-merge": "^3.1.0",
+    "tw-merge": "^0.0.1-alpha.3"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4"
   }
 }

@@ -4,6 +4,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 export default function Signup() {
   const [email, setEmail] = useState('');
@@ -15,13 +16,13 @@ export default function Signup() {
             try{
                 const response=await axios.post("/api/signup",{email,password});
                 if(response.status===201){
-                    alert(response.data.message);
+                    toast.success(response.data.message);
                     router.push("/signin");
                 }else{
-                    alert(response.data.error || "signup failed try after some time");
+                    toast.info(response.data.error || "signup failed try after some time");
                 }
             }catch(error){
-                alert(error.response?.data?.error || "server error");
+                toast.error(error.response?.data?.error || "server error");
             }
    }
 

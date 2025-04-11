@@ -118,6 +118,8 @@ import Resume from './Resume/pdf';
 import { usePDF } from '@react-pdf/renderer';
 import { useSelector } from 'react-redux';
 import { FaDownload, FaEye } from 'react-icons/fa6';
+import { useSession, signOut } from "next-auth/react";
+import { toast } from 'react-toastify';
 
 const PreviewButtons = () => {
   const resumeData = useSelector(state => state.resume);
@@ -125,6 +127,9 @@ const PreviewButtons = () => {
   const document = useMemo(() => <Resume data={resumeData} />, [resumeData]);
   const [instance] = usePDF({ document });
   const [blobUrl, setBlobUrl] = useState(null);
+
+  const { data: session } = useSession();
+
 
   useEffect(() => {
     if (instance.blob) {
@@ -144,6 +149,14 @@ const PreviewButtons = () => {
     );
   };
 
+   function handleDownload(e){
+        if(!session){
+          e.preventDefault();
+          toast.warn("Login required to download")
+          return;
+        }
+  }
+
   return (
     <div className="mb-6 flex justify-center gap-4">
       <button
@@ -161,7 +174,7 @@ const PreviewButtons = () => {
         className={`flex items-center gap-2 bg-blue-500 rounded-md border border-blue-500 px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:brightness-110 hover:text-white md:text-base ${
           !blobUrl ? 'pointer-events-none opacity-50' : ''
         }`}
-      >
+       onClick={handleDownload}>
         <FaDownload />
         Download
       </a>

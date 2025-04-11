@@ -6,7 +6,7 @@ import ContentEditable from 'react-contenteditable';
 import { useRef } from 'react';
 
 const Input = ({ label, name, type, placeholder, options, span, value, ...props }) => {
-    const inputClassName = `block w-full rounded-md border border-gray-600 bg-gray-700/75 p-2 text-sm text-gray-100 shadow-md shadow-gray-800 outline-none focus:border-2 focus:border-primary-500 focus:bg-gray-700 md:text-base 2xl:p-2.5`;
+    const inputClassName = `block w-full rounded-md border border-gray-600 bg-gray-900/75 p-2 text-sm text-gray-100 shadow-md shadow-gray-800 outline-none focus:border-2 focus:border-primary-500 focus:bg-gray-700 md:text-base 2xl:p-2.5`;
 
     const inputRef = useRef(null);
 

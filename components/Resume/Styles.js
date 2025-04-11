@@ -66,6 +66,23 @@ const styles = StyleSheet.create({
     link: {
         color: '#666',
     },
+    listItem: {
+        fontSize: 10,
+        marginBottom: 4,
+        lineHeight: 1.3,
+      },
+      link: {
+        fontSize: 10,
+        color: '#555',
+        marginRight: 10,
+        textDecoration: 'none',
+      },
+      languages_wrapper: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+      }
+      
 });
 
 export default styles;

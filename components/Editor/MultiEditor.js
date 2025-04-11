@@ -126,7 +126,7 @@ const MultiEditor = ({ tab }) => {
                         </h3>
 
                         {selectedCard == i && (
-                            <div className="mt-6 grid gap-4 md:grid-cols-2 md:gap-6">
+                            <div className="mt-6 grid gap-4 p-2 md:grid-cols-2 md:gap-6">
                                 {fields.map(field => (
                                     <Input
                                         key={field.name}

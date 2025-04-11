@@ -22,7 +22,7 @@ export default function Page() {
     <div className="mx-auto mt-8 flex max-w-screen-xl 2xl:max-w-screen-2xl flex-col gap-10 px-3 pb-8 md:mt-8 2xl:mt-14 2xl:gap-10">
       <PreviewButtons />
       <div className="flex flex-col gap-10 md:flex-row">
-        <div className="flex-grow">
+        <div className="flex-grow ">
           <Tabs activeTab={tab} />
           <Editor tab={tab} />
         </div>
