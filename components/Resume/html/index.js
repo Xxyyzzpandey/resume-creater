@@ -146,7 +146,7 @@ const Experience = ({ data }) => (
 const Skills = ({ data }) => (
     <Section title={'skills'}>
         {data?.split('\n').map((line, i) => (
-            <Text style={{ fontSize: 11 }}>{line}</Text>
+            <Text key={i} style={{ fontSize: 11 }}>{line}</Text>
         ))}
     </Section>
 );
@@ -167,9 +167,9 @@ const Preview = () => {
                     </Section>
                 )}
 
-                {education.length > 0 && <Education data={education} />}
-                {experience.length > 0 && <Experience data={experience} />}
-                {projects.length > 0 && <Projects data={projects} />}
+                {education?.length > 0 && <Education data={education} />}
+                {experience?.length > 0 && <Experience data={experience} />}
+                {projects?.length > 0 && <Projects data={projects} />}
 
                 {skills?.skills?.length > 0 && <Skills data={skills.skills} />}
             </div>
